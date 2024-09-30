@@ -717,3 +717,31 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+#google_translate_element {
+  display: none;
+}
+
+.custom-translate-button {
+  background-color: #4493f8; /* Cor do botão */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-translate-button:hover {
+  background-color: #0d1117; /* Cor ao passar o mouse */
+}
+
+.language-toggle-container {
+  position: fixed;
+  top: 10px; /* Distância do topo da página */
+  right: 10px; /* Distância da borda direita da página */
+  z-index: 1000; /* Garantir que o botão apareça sobre outros elementos */
+  display: flex; /* Se você quiser os botões alinhados horizontalmente */
+  gap: 10px; /* Espaçamento entre os botões */
+}
