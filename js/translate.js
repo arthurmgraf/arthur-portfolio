@@ -3,8 +3,13 @@ let translations = {}; // Variável para armazenar as traduções carregadas
 // Função para mudar o idioma
 async function changeLanguage(lang) {
     try {
+        // Verifica o hostname e ajusta o caminho base para carregar o arquivo de tradução
+        const basePath = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" 
+            ? "" 
+            : "/arthur-portfolio";
+
         // Carrega o arquivo JSON correspondente ao idioma selecionado
-        const response = await fetch(`${window.location.origin}/arthur-portfolio/translations/${lang}.json`);
+        const response = await fetch(`${basePath}/translations/${lang}.json`);
         if (!response.ok) {
             throw new Error(`Erro ao carregar o arquivo de tradução: ${response.statusText}`);
         }
